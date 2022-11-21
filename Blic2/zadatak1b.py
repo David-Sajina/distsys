@@ -7,7 +7,7 @@ from aiohttp import web
 routes = web.RouteTableDef()
 temp = []
 """setup punchline"""
-@routes.post("/sendJokes")
+@routes.post("/filterJoke")
 async def get_nes(request):
     try:
         req = await request.json()

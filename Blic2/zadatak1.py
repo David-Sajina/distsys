@@ -36,7 +36,7 @@ async def get_jokes(request):
 
 async def sendJokes(json_data, session):
     for i in range(len(json_data)):
-        async with session.post("http://0.0.0.0:8081/sendJokes", json=json_data[i]) as response:
+        async with session.post("http://0.0.0.0:8081/filterJoke", json=json_data[i]) as response:
             print("Sending",json_data[i])
             x = await response.text()
     return x
@@ -44,7 +44,7 @@ async def sendJokes(json_data, session):
 
 async def sendPerson(json_data, session):
     for i in range(len(json_data)):
-        async with session.post("http://0.0.0.0:8082/sendPerson", json=json_data[i]) as response:
+        async with session.post("http://0.0.0.0:8082/filterUser", json=json_data[i]) as response:
             print("Sending",json_data[i])
             x = await response.text()
     return x

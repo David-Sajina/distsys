@@ -6,7 +6,7 @@ from aiohttp import web
 tasks = []
 routes = web.RouteTableDef()
 """ime prezime grad email"""
-@routes.post("/sendPerson")
+@routes.post("/filterUser")
 async def get_nes(request):
     req = await request.json()
     temp = req
