@@ -24,7 +24,7 @@ async def check_db():
 
 async def fill_db():
     async with aiofiles.open("datasetFile.json", mode="r") as file:
-        max_num = 1
+        max_num = 10000
         i = 0
         print("filldb")
         async for cur in file:
