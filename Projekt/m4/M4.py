@@ -1,8 +1,5 @@
-import aiosqlite
-import asyncio
 from aiohttp import web
 import aiofiles
-import json
 import os
 
 routes = web.RouteTableDef()
@@ -13,9 +10,10 @@ async def write_files():
     # Create the "files" directory if it does not exist
     if not os.path.exists('files'):
         os.makedirs('files')
-        
+
     print("write")
     for data in entry:
+        print(data['filename'])
         filename = data['filename']
         content = data['content']
         async with aiofiles.open(f'files/{filename}', 'w', encoding='utf-8') as f:

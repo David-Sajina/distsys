@@ -8,10 +8,10 @@ async def getAndDistribute(req):
     try:
         tasks = []
         async with aiohttp.ClientSession() as session:
-            res = await session.get("http://127.0.0.1:8080/getData")
+            res = await session.get("http://M0:8080/getData")
             podaci = await res.json()
-            tasks.append(asyncio.create_task(session.post("http://127.0.0.1:8082/", json=podaci)))
-            tasks.append(asyncio.create_task(session.post("http://127.0.0.1:8083/", json=podaci)))
+            tasks.append(asyncio.create_task(session.post("http://M2:8082/", json=podaci)))
+            tasks.append(asyncio.create_task(session.post("http://M3:8083/", json=podaci)))
             t = asyncio.gather(*tasks)
             await t
             print("t", t)

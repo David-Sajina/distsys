@@ -1,0 +1,26 @@
+services:
+  m0:
+    build: M0
+    command: ["python", "./M0.py"]
+    ports:
+      - "8080:8080"
+  m1:
+    build: M1
+    command: ["python", "./M1.py"]
+    ports:
+      - "8081:8081"
+  m2:
+    build: M2
+    command: ["python", "./M2.py"]
+    ports:
+      - "8082:8082"
+  m3:
+    build: M3
+    command: ["python", "./M3.py"]
+    ports:
+      - "8083:8083"
+  m4:
+    build: M4
+    command: ["python", "./M4.py"]
+    ports:
+      - "8084:8084"
