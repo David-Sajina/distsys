@@ -3,11 +3,14 @@ import random
 import asyncio
 import re
 import string
+import sys
 
+print('cmd entry:', sys.argv)
 
 routes = web.RouteTableDef()
-
-
+print(type(sys.argv[1]), sys.argv[1])
+#x = sys.argv[0].toString()
+x = int(sys.argv[1])
 @routes.get("/")
 async def function(request):
 	try:
@@ -25,4 +28,4 @@ async def function(request):
 
 app = web.Application()
 app.router.add_routes(routes)
-web.run_app(app, port=8081)
+web.run_app(app, port= x)

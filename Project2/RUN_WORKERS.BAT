@@ -1,10 +1,10 @@
-start cmd /k py workers/W1.py
-start cmd /k py workers/W2.py
-start cmd /k py workers/W3.py
-start cmd /k py workers/W4.py
-start cmd /k py workers/W5.py
-start cmd /k py workers/W6.py
-start cmd /k py workers/W7.py
-start cmd /k py workers/W8.py
-start cmd /k py workers/W9.py
-start cmd /k py workers/W10.py
+start cmd /k py workers/W1.py "8081"
+start cmd /k py workers/W1.py "8082"
+start cmd /k py workers/W1.py "8083"
+start cmd /k py workers/W1.py "8084"
+start cmd /k py workers/W1.py "8085"
+start cmd /k py workers/W1.py "8086"
+start cmd /k py workers/W1.py "8087"
+start cmd /k py workers/W1.py "8088"
+start cmd /k py workers/W1.py "8089"
+start cmd /k py workers/W1.py "8090"
